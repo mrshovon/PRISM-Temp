@@ -15,13 +15,13 @@ h6 {
 }
 
 a {
-  color: #000000;
+  color: #000000 !important; /* added */
   transition: all .5s ease;
+  text-decoration: none !important; /* added */
 }
 
 a:hover {
-  color: #2eca6a;
-  text-decoration: none;
+  color: #2eca6a !important; /* added */
 }
 
 .link-two {
