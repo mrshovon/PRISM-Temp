@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2023 at 12:08 PM
+-- Generation Time: Apr 25, 2023 at 12:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -69,7 +69,8 @@ CREATE TABLE `tbl_careers` (
 --
 
 INSERT INTO `tbl_careers` (`maker_id`, `auth_id`, `action_type`, `action_date`, `career_id`, `job_title`, `job_description`, `phone`, `email`) VALUES
-(1, 'NULL', 'update', '2023-04-02 11:21:18', 1, 'title...changed', 'Job_description.............changed', 'company_phone', 'company@email.com');
+(1, '1', 'update', '2023-04-12 13:13:19', 1, 'title...changeds3', 'description', 'company_phone', 'company@email.com'),
+(1, NULL, 'insert', '2023-04-11 11:33:49', 7, 'Job 2', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '01245678933', 'prism-hr@prism.com');
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,8 @@ CREATE TABLE `tbl_company_profile` (
 --
 
 INSERT INTO `tbl_company_profile` (`maker_id`, `auth_id`, `action_type`, `action_date`, `company_name`, `company_vision`, `company_address`, `company_email`, `privecy_policy`, `terms_and_condition`, `company_id`) VALUES
-('1730020@iub.edu.bd', '', 'update', '2023-04-02 10:28:13', 'PRISM', 'vision....text', 'address....text', 'email@company.com', 'privacy policy....file link', 'terms and condition....file', 1);
+('1730020@iub.edu.bd', '', 'update', '2023-04-02 10:28:13', 'PRISM', 'vision....text', 'address....text', 'email@company.com', 'privacy policy....file link', 'terms and condition....file', 1),
+('1730020@iub.edu.bd', NULL, 'insert', '2023-04-11 14:07:35', 'PRISM', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', '815 East Mall Drive ,South Dakota 57701 United States', 'inquery@prism.com', 'pp', 'term n condition', 2);
 
 -- --------------------------------------------------------
 
@@ -211,14 +213,15 @@ CREATE TABLE `tbl_look_type` (
 --
 
 INSERT INTO `tbl_look_type` (`maker_id`, `auth_id`, `action_type`, `action_date`, `look_type_id`, `look_type_name`) VALUES
-('1730020@iub.edu.bd', '1', 'update', '2023-03-22 17:33:16', 1, 'PropertyType'),
+('1730020@iub.edu.bd', '1', 'update', '2023-04-12 12:31:32', 1, 'PropertyType'),
 ('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 2, 'PropertySubType'),
 ('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 3, 'Amenities'),
 ('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 4, 'RenovationType'),
 ('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 5, 'Services'),
 ('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 6, 'FollowUs'),
 ('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 7, 'PropertyStatus'),
-('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 8, 'DescriptiveStaus');
+('1730020@iub.edu.bd', NULL, 'insert', '2023-03-21 00:00:00', 8, 'DescriptiveStatus'),
+('1730020@iub.edu.bd', NULL, 'insert', '2023-04-11 13:00:21', 9, 'Purpose');
 
 -- --------------------------------------------------------
 
@@ -243,8 +246,31 @@ CREATE TABLE `tbl_look_up` (
 --
 
 INSERT INTO `tbl_look_up` (`maker_id`, `auth_id`, `action_type`, `action_date`, `look_up_id`, `look_up_name`, `short_name`, `sort_order`, `look_type_id`) VALUES
-('1730020@iub.edu.bd', 'NULL', 'insert', '2023-03-22 09:31:45', 1, 'Comercial', 'com', 1, 1),
-('1730020@iub.edu.bd', 'NULL', 'update', '2023-04-02 09:09:15', 2, 'Amenities', 'Amn', 2, 3);
+('1730020@iub.edu.bd', '1730020@iub.edu.bd', 'update', '2023-04-12 12:01:46', 1, 'Comercial', 'com', 1, 1),
+('1730020@iub.edu.bd', 'NULL', 'update', '2023-04-02 09:09:15', 2, 'Amenity 1', 'Amn', 2, 3),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 12:37:25', 3, 'Residential', 'res', 2, 1),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 12:44:02', 4, 'Industrial', 'ind', 3, 1),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:00:00', 5, 'Amenity 2', 'amn', 2, 3),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:00:41', 6, 'Rent', 'rnt', 1, 9),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:01:07', 7, 'Sell', 'sll', 2, 9),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:06:12', 8, 'Newly Published', 'nwp', 1, 7),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:06:33', 9, 'Popular', 'plr', 2, 7),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:06:49', 10, 'Sold', 'sld', 3, 7),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:07:18', 11, 'Inactive', 'inctv', 4, 7),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:07:51', 12, 'Deleted', 'dltd', 5, 7),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:08:40', 13, 'Fully Furnished', 'flfrnsd', 1, 8),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:09:36', 14, 'Under Construction', 'ndrcns', 2, 8),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-11 13:09:51', 15, 'Ready', 'rdy', 3, 8),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 09:30:16', 16, ' AC Land Mutation', 'mutation', 1, 5),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 09:31:01', 17, 'Deed Withdrawal', 'deed', 2, 5),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 09:31:41', 18, 'Hiba-Bil-Iwaz Deed', 'hiba deed', 3, 5),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 09:32:12', 19, 'Title Deed', 'ttl dd', 4, 5),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 09:33:31', 20, 'Power of Attorney', 'pwr of att', 5, 5),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 09:34:04', 21, 'Deed of agreement', 'agrmnt dd', 6, 5),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 14:54:05', 22, 'Interior Painting', 'int pnt', 1, 4),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 14:54:27', 23, 'Exterior Painting', 'ex pnt', 2, 4),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 14:55:25', 24, 'Plaster Work', 'pltr wrk', 3, 4),
+('1730020@iub.edu.bd', 'NULL', 'insert', '2023-04-25 14:55:52', 25, 'Kitchen Remodel ', 'ktchn rmdl', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -261,11 +287,11 @@ CREATE TABLE `tbl_property_info` (
   `description` varchar(5000) NOT NULL,
   `city` varchar(30) NOT NULL,
   `property_area` varchar(30) NOT NULL,
-  `property_status` decimal(10,2) NOT NULL,
+  `property_size` varchar(100) NOT NULL,
   `beds` int(11) NOT NULL,
   `baths` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `is_occupied` binary(10) NOT NULL,
+  `is_occupied` int(1) NOT NULL,
   `floor_plan` varchar(500) NOT NULL,
   `phone_number` varchar(14) NOT NULL,
   `property_address` varchar(200) NOT NULL,
@@ -275,15 +301,15 @@ CREATE TABLE `tbl_property_info` (
   `property_type_code` int(11) NOT NULL,
   `descriptive_status_code` int(11) NOT NULL,
   `amenities_code` int(11) NOT NULL,
-  `property_status_code` int(11) NOT NULL
+  `property_status_code` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_property_info`
 --
 
-INSERT INTO `tbl_property_info` (`auth_id`, `action_type`, `action_date`, `property_id`, `property_name`, `description`, `city`, `property_area`, `property_status`, `beds`, `baths`, `price`, `is_occupied`, `floor_plan`, `phone_number`, `property_address`, `level`, `email`, `purpose_code`, `property_type_code`, `descriptive_status_code`, `amenities_code`, `property_status_code`) VALUES
-('null', 'update', '2023-04-02 12:57:29', '1', 'Gulmohor', 'description.......changed', 'Pabna', 'Dhanmondi', '1350.00', 3, 3, '5500000.00', 0x30000000000000000000, 'plan.....file', '01723568944', 'address....text', 2, 'shovon@gmail.com', 1, 1, 1, 1, 1);
+INSERT INTO `tbl_property_info` (`auth_id`, `action_type`, `action_date`, `property_id`, `property_name`, `description`, `city`, `property_area`, `property_size`, `beds`, `baths`, `price`, `is_occupied`, `floor_plan`, `phone_number`, `property_address`, `level`, `email`, `purpose_code`, `property_type_code`, `descriptive_status_code`, `amenities_code`, `property_status_code`) VALUES
+('shovon@gmail.com', 'update', '2023-04-25 16:25:07', '1', 'Gulmohor', 'description.......changed', 'Pabna', 'Dhanmondi', '1350.00', 3, 3, '5500000.00', 1, 'public/uploads/Gulmohor_20230425_162507.png', '01723568944', 'address....text', 2, 'shovon@gmail.com', 6, 1, 13, 2, 8);
 
 -- --------------------------------------------------------
 
@@ -357,9 +383,10 @@ CREATE TABLE `tbl_user_info` (
 --
 
 INSERT INTO `tbl_user_info` (`maker_id`, `auth_id`, `action_type`, `action_date`, `name`, `password`, `phone`, `email`, `user_type`, `title`) VALUES
-('1', NULL, 'insert', '2023-03-21 14:26:34', 'System Admin', 'admin', '0183949291', '1730020@iub.edu.bd', 'administrator', 'Mr.'),
+('1', '1730020@iub.edu.bd', 'update', '2023-04-17 11:13:32', 'System Admin', '$2y$10$ALj32R5akJ8yM/Fp6ui3UOaQ19BnGoTdecU7Ox7c5bd1dgh5lUanG', '0183949291', '1730020@iub.edu.bd', 'administrator', 'Mr'),
 ('joy@gmail.com', NULL, 'insert', '2023-04-05 16:35:39', 'joy', '$2y$10$rkhUFhAcAeRK7BRcBu19v.DPm4.waHt/hn2hnbJFp/YQuiH3ts7f.', '01478965233', 'joy@gmail.com', 'customer', 'Mr.'),
-('shovon@gmail.com', NULL, 'update', '2023-04-02 10:07:53', 'Shovon Rahman', 'rahman12345', '01312457896', 'shovon@gmail.com', 'customer', 'Mr.');
+('nidhi@gmail.com', 'nidhi@gmail.com', 'update', '2023-04-16 12:00:04', 'nidhi', '$2y$10$ZL3AhHiZjDFXdNRHIGpa1.KAHXyThGsgPuLV/T.NV2CDtw8Gw7wvW', '01245678933', 'nidhi@gmail.com', 'customer', 'Mrs'),
+('shovon@gmail.com', 'shovon@gmail.com', 'update', '2023-04-17 11:58:06', 'Shovon Rahman', '$2y$10$w3a7IVXyjlEWGja2m6ynj.WN2Q5UrIyztbbbg76Sip4kLXgEAy2MW', '01312457896', 'shovon@gmail.com', 'customer', 'Mr');
 
 --
 -- Indexes for dumped tables
@@ -471,7 +498,7 @@ ALTER TABLE `tbl_user_info`
 -- AUTO_INCREMENT for table `tbl_careers`
 --
 ALTER TABLE `tbl_careers`
-  MODIFY `career_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `career_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_inquery`
